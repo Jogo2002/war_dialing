@@ -7,3 +7,4 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run doctests
         run: python3 -m doctest wardial.py
+        
