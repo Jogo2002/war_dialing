@@ -116,7 +116,7 @@ def increment_ip(ip):
             parts[i - 1] += 1
     if parts[0] == 256:
         parts[0] = 0
-    return '.'.join(str(x) for x in octets)
+    return '.'.join(str(x) for x in parts)
 
 
 def enumerate_ips(start_ip, n):
