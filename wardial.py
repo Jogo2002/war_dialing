@@ -108,14 +108,14 @@ def increment_ip(ip):
     >>> increment_ip('255.255.255.255')
     '0.0.0.0'
     '''
-    octets = [int(x) for x in ip.split('.')]
-    octets[3] += 1
+    parts = [int(x) for x in ip.split('.')]
+    parts[3] += 1
     for i in range(3, 0, -1):
-        if octets[i] == 256:
-            octets[i] = 0
-            octets[i - 1] += 1
-    if octets[0] == 256:
-        octets[0] = 0
+        if parts[i] == 256:
+            parts[i] = 0
+            parts[i - 1] += 1
+    if parts[0] == 256:
+        parts[0] = 0
     return '.'.join(str(x) for x in octets)
 
 
